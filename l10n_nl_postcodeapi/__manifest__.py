@@ -4,7 +4,7 @@
 {
     'name': 'Integration with PostcodeApi.nu',
     'summary': 'Autocomplete Dutch addresses using PostcodeApi.nu',
-    'version': '16.0.1.0.1',
+    'version': '18.0.0.0',
     'author': 'Therp BV, Open2Bizz, Odoo Community Association (OCA)',
     'category': 'Localization',
     'website': 'https://github.com/OCA/l10n-netherlands',
