@@ -31,8 +31,8 @@ class TestL10nNlKvkPartner(BaseCommon):
             [
                 {
                     "l10n_nl_kvk": "99876543",
-                    "peppol_eas": "0106",
-                    "peppol_endpoint": "99876543",
+                    "routing_scheme": "0106",
+                    "routing_endpoint": "99876543",
                 },
             ],
         )
@@ -51,8 +51,8 @@ class TestL10nNlKvkPartner(BaseCommon):
             [
                 {
                     "l10n_nl_kvk": "99876543",
-                    "peppol_eas": "0106",
-                    "peppol_endpoint": "99876543",
+                    "routing_scheme": "0106",
+                    "routing_endpoint": "99876543",
                 },
             ],
         )
@@ -60,8 +60,8 @@ class TestL10nNlKvkPartner(BaseCommon):
     def test_create_peppol(self):
         partner = self._create_partner(
             {
-                "peppol_eas": "0106",
-                "peppol_endpoint": "99876543",
+                "routing_scheme": "0106",
+                "routing_endpoint": "99876543",
             }
         )
         self.assertRecordValues(
@@ -69,8 +69,8 @@ class TestL10nNlKvkPartner(BaseCommon):
             [
                 {
                     "l10n_nl_kvk": "99876543",
-                    "peppol_eas": "0106",
-                    "peppol_endpoint": "99876543",
+                    "routing_scheme": "0106",
+                    "routing_endpoint": "99876543",
                 },
             ],
         )
@@ -80,15 +80,15 @@ class TestL10nNlKvkPartner(BaseCommon):
 
     def test_create_peppol_form(self):
         partner_form = self._get_partner_form()
-        partner_form.peppol_endpoint = "99876543"
-        partner_form.peppol_eas = "0106"
+        partner_form.routing_endpoint = "99876543"
+        partner_form.routing_scheme = "0106"
         self.assertRecordValues(
             partner_form.save(),
             [
                 {
                     "l10n_nl_kvk": "99876543",
-                    "peppol_eas": "0106",
-                    "peppol_endpoint": "99876543",
+                    "routing_scheme": "0106",
+                    "routing_endpoint": "99876543",
                 },
             ],
         )
@@ -96,8 +96,8 @@ class TestL10nNlKvkPartner(BaseCommon):
     def test_create_no_kvk(self):
         partner = self._create_partner(
             {
-                "peppol_eas": "0190",
-                "peppol_endpoint": "2.16.528.1.1007",
+                "routing_scheme": "0190",
+                "routing_endpoint": "2.16.528.1.1007",
             }
         )
         self.assertRecordValues(
@@ -105,8 +105,8 @@ class TestL10nNlKvkPartner(BaseCommon):
             [
                 {
                     "l10n_nl_kvk": False,
-                    "peppol_eas": "0190",
-                    "peppol_endpoint": "2.16.528.1.1007",
+                    "routing_scheme": "0190",
+                    "routing_endpoint": "2.16.528.1.1007",
                 },
             ],
         )
@@ -117,15 +117,15 @@ class TestL10nNlKvkPartner(BaseCommon):
 
     def test_create_no_kvk_form(self):
         partner_form = self._get_partner_form()
-        partner_form.peppol_endpoint = "2.16.528.1.1007"
-        partner_form.peppol_eas = "0190"
+        partner_form.routing_endpoint = "2.16.528.1.1007"
+        partner_form.routing_scheme = "0190"
         self.assertRecordValues(
             partner_form.save(),
             [
                 {
                     "l10n_nl_kvk": False,
-                    "peppol_eas": "0190",
-                    "peppol_endpoint": "2.16.528.1.1007",
+                    "routing_scheme": "0190",
+                    "routing_endpoint": "2.16.528.1.1007",
                 },
             ],
         )
